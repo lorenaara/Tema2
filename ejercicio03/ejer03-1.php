@@ -11,5 +11,10 @@
     //inicializa y muestra una variable timestamp y en fecha de tu cumpleaños
    $fecha = new DateTime("2001-09-27");
    echo "Variable timestamp <strong>".date_timestamp_get($fecha). "</strong><br>";
-    
+    echo "Fecha de mi cumpleaños <strong>". date_format($fecha, "d/m/Y"). "</strong><br>";
+    //Calcular la fecha y el dia de la semana de 60 dias
+    $fechaHoy = date("d-m-Y");
+    $fechaSesenta = date("d-m-Y", strtotime($fechaHoy. "+ 60 days"));
+    echo "el dia dentro de 60:  <strong>".$fechaSesenta. "</strong><br>";
+
 ?>

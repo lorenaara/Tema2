@@ -16,5 +16,7 @@
     $fechaHoy = date("d-m-Y");
     $fechaSesenta = date("d-m-Y", strtotime($fechaHoy. "+ 60 days"));
     echo "el dia dentro de 60:  <strong>".$fechaSesenta. "</strong><br>";
+    //ver contenido del fichero
 
+  echo  file_get_contents("ejer03-1.php");
 ?>

@@ -1,15 +1,22 @@
 <?php
+include('html/plantilla.html');
     $valor= $_GET['valor'];
-    echo "El valor pasado es: ". $valor;
+    echo "<p>El valor pasado es: ". $valor . "</p>";
     if(is_numeric($valor)){
-        $valor=intval($valor);
-        if(is_int($valor)){
-            echo "<br>El numero pasado es un valor entero";
-        }
-        if(is_float($valor)){
-            echo "<br>El numero pasado es un valor de tipo float";
+        if(strpos($valor, '.')){
+            echo "<p>El numero pasado es un valor de tipo float</p>";
+        }else{
+            echo "<p>El numero pasado es un valor entero</p>";
         }
     }else{
-        echo "No es un numero";
+        echo "<p>No es un numero</p>";
     }
+
 ?>
+<br> <div>
+<a href="ejer03-3.php">Codigo de la pagina</a>
+    </div>
+
+<footer>
+        <h3>Lorena Aranda de Rojas</h3>
+    </footer>
